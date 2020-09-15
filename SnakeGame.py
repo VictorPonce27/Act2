@@ -15,7 +15,7 @@ def change(x, y):
 def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
-
+#basically the whole game 
 def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
@@ -43,13 +43,10 @@ def move():
     square(food.x, food.y, 9, 'green')
     food.x = randrange(-5, 5) * 10
     food.y = randrange(-5, 5) * 10
-
+    # Makes the food move around as you move
     if(-200 >food.x >190 or -200 > head.y > 190 ):
         food.x = 10
         food.y = 10
-    # while food.x :
-    #     pass
-
     update()
     ontimer(move, 100)
 
