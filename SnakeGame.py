@@ -14,6 +14,7 @@ colors_list = ["green","yellow","blue","black","pink","purple", "orange"]
 snake_color = colors_list[random.randint(0,len(colors_list)-1)]
 food_color = colors_list[random.randint(0,len(colors_list)-1)]
 
+# using a while loop to verify that that the sanke is not the same color as the food
 while snake_color==food_color:
     food_color = colors_list[random.randint(0,len(colors_list)-1)]
 
@@ -56,9 +57,11 @@ def move():
         snake.pop(0)
 
     clear()
-
+    # for loop to iterate through the body of the snake and give it the color
     for body in snake:
         square(body.x, body.y, 9, snake_color)
+
+    #  makes the food to move around the game and picks the color of the food
 
     square(food.x, food.y, 9, food_color)
     food.x = randrange(-5, 5) * 10
