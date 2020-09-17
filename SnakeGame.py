@@ -7,6 +7,9 @@ food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
 
+
+# Random Snake and Food color Generators __________________________________________
+
 colors_list = ["green","yellow","blue","black","pink","purple", "orange"]
 snake_color = colors_list[random.randint(0,len(colors_list)-1)]
 food_color = colors_list[random.randint(0,len(colors_list)-1)]
@@ -14,16 +17,25 @@ food_color = colors_list[random.randint(0,len(colors_list)-1)]
 while snake_color==food_color:
     food_color = colors_list[random.randint(0,len(colors_list)-1)]
 
+
+
+# Change snake direction __________________________________________
+
 def change(x, y):
-    "Change snake direction."
     aim.x = x
     aim.y = y
 
-# checks that you're in bounds
+
+
+# Boundaries Checker __________________________________________
+
 def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
-#basically the whole game
+
+
+# Snake & Food Movement __________________________________________
+
 def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
@@ -57,6 +69,9 @@ def move():
         food.y = 10
     update()
     ontimer(move, 100)
+
+
+# Program Init __________________________________________
 
 setup(420, 420, 370, 0)
 hideturtle()
