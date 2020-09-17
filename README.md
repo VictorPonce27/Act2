@@ -1,4 +1,4 @@
-# Act1
+# Act2
 
 Un juego de snake
 
