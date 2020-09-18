@@ -4,7 +4,7 @@ Un juego de snake
 
 ## Instalacion
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install freegames.
 
 ```bash
  python3 -m pip install freegames
